@@ -1,0 +1,158 @@
+/* Colors */
+*,
+*,
+::after,
+::before {
+    padding: 0;
+    margin: 0;
+}
+
+.Home {
+    position: relative;
+    max-width: 2400px;
+    margin: auto;
+    height: 78vh;
+}
+
+.Home_section {
+    width: 100%;
+    height: 100%;
+}
+
+.Home_section video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.Overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+.Home_section--intro {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content h1,
+.content h5 {
+    color: var(--white);
+}
+
+.content h5 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.content h5 span {
+    font-size: 1.6rem;
+}
+
+.content h1 {
+    font-size: 3rem;
+}
+
+.btn {
+    width: 150px;
+    padding: 10px 12px;
+    outline: none;
+    cursor: pointer;
+    font-weight: 400;
+    border-radius: 4px;
+    color: var(--white);
+    font-size: 15px;
+    border: none;
+    background: none;
+}
+
+.btn1 {
+    position: relative;
+    margin: 40px 30px 0 0;
+    z-index: 9;
+}
+
+.btn1:after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: var(--color1);
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.btn1:hover::after {
+    animation: fills 300ms linear forwards;
+}
+
+
+
+.Home-buttons .button {
+    text-decoration: none;
+    color: var(--white);
+}
+
+/* Responsive */
+@media only screen and (max-width: 480px) {
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content h5 span {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .content h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 180px) {
+
+    .content h1 {
+        font-size: 12px;
+    }
+
+    .content h5,
+    .content h5 span {
+        font-size: 9px;
+        line-height: 10px;
+    }
+
+    .btn {
+        width: 80px;
+        margin: 5px 10px 0 0;
+        padding: 4px;
+        font-size: 8px;
+    }
+}
+
+/* Animation */
+
+@keyframes fills {
+    0% {
+        height: 2px;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
