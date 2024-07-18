@@ -4,16 +4,15 @@ import { Buttonlink } from './Buttonlink';
 import './css/about.css';
 
 const Servicecard = ({ service }) => (
+    <div class="flip-card" style={{ background: "red" }}>
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src={service.image} alt='image' />
 
-    <div className='service-card'>
-
-        <div className='card-img'>
-            <img src={service.image} alt='Icon' />
-        </div>
-        <div className='service-card_inner'>
-            <div className='card-content'>
-                <h3>{service.title}</h3>
-                <p><a href='/contact'>Contact</a></p>
+                {service.front}
+            </div>
+            <div class="flip-card-back">
+                {service.back}
             </div>
         </div>
     </div>

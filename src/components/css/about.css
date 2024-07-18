@@ -30,28 +30,54 @@
 
 .service-cards {
     display: flex;
-    align-items: center;
-    text-align: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     margin: 50px 0 0;
 }
 
-.service-card {
-    flex: 30%;
-    align-items: center;
+.flip-card {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+    /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
     text-align: center;
-    height: 380px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
 }
 
-.card-content a {
-    text-decoration: none;
-    color: #ff7e3e88;
-    transition: all 300ms ease-in;
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
 }
 
-.card-content a:hover {
-    text-decoration: dotted;
-    color: #ff7e3e;
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+    color: white;
+    transform: rotateY(180deg);
 }
 
 @media only screen and (max-width: 480px) {
