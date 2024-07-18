@@ -17,6 +17,10 @@
     font-family: "Poppins", sans-serif;
 }
 
+body {
+    background-color: var(--color2);
+}
+
 .nav {
     position: relative;
     width: 100%;
