@@ -33,7 +33,6 @@
 .flip-card {
     width: 300px;
     height: 225px;
-    border: 1px solid #f1f1f1;
     perspective: 1000px;
     /* Remove t
     his if you don't want the 3D effect */
@@ -123,6 +122,10 @@
     .service-card {
         flex: 38%;
 
+    }
+
+    .flip-card {
+        margin-bottom: 30px;
     }
 }
 
