@@ -31,6 +31,7 @@ export const ValueofProjects = [
         description: "The projects",
         url: "/"
     },
+
     {
         title: "Project 3",
         description: "The projects",
@@ -38,6 +39,49 @@ export const ValueofProjects = [
     },
 ]
 
+
+export const Skills = [
+    {
+        name: "HTML",
+        icon: "https://github.com/sathishkumarvbtech/Portfolio/blob/main/src/asset/icons/HTML.svg?raw=true"
+    },
+    {
+        name: "CSS",
+        icon: "https://github.com/sathishkumarvbtech/Portfolio/blob/main/src/asset/icons/CSS.svg?raw=true"
+    },
+    {
+        name: "Javascript",
+        icon: "https://github.com/sathishkumarvbtech/Portfolio/blob/main/src/asset/icons/Javascript.svg?raw=true"
+    },
+    {
+        name: "SASS",
+        icon: "https://github.com/sathishkumarvbtech/Portfolio/blob/main/src/asset/icons/SASS.svg?raw=true"
+    },
+    {
+        name: "React JS",
+        icon: "https://github.com/sathishkumarvbtech/Portfolio/blob/main/src/asset/icons/React JS.svg?raw=true"
+    },
+    {
+        name: "Java",
+        icon: "https://github.com/sathishkumarvbtech/Portfolio/blob/main/src/asset/icons/Java.svg?raw=true"
+    },
+    {
+        name: "MySQL",
+        icon: "https://github.com/sathishkumarvbtech/Portfolio/blob/main/src/asset/icons/MySQL.svg?raw=true"
+    },
+    {
+        name: "Spring Boot",
+        icon: "https://github.com/sathishkumarvbtech/Portfolio/blob/main/src/asset/icons/Spring boot.svg?raw=true"
+    },
+    {
+        name: "Git",
+        icon: "https://github.com/sathishkumarvbtech/Portfolio/blob/main/src/asset/icons/Git.svg?raw=true"
+    },
+    {
+        name: "Github",
+        icon: "https://github.com/sathishkumarvbtech/Portfolio/blob/main/src/asset/icons/Github.svg?raw=true"
+    },
+]
 
 export const experiences = [
     {

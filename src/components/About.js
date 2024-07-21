@@ -1,5 +1,5 @@
 import React from 'react';
-import { services } from '../constant';
+import { services, Skills } from '../constant';
 import { Buttonlink } from './Buttonlink';
 import './css/about.css';
 
@@ -22,6 +22,12 @@ const Servicecard = ({ service }) => (
     </div>
 );
 
+const SkillsSction = ({ skill }) => (
+    <div className='skill-icon'>
+        <img src={skill.icon} alt={skill.name} />
+    </div>
+);
+
 export const About = () => {
     return (
         <section className='about'>
@@ -38,6 +44,11 @@ export const About = () => {
                 </div>
             </div>
 
+            <div className='skills-section'>
+                {Skills.map((skill) => (
+                    <SkillsSction skill={skill} />
+                ))}
+            </div>
         </section>
     )
 }
