@@ -1,0 +1,113 @@
+.contact {
+    max-width: 1400px;
+}
+
+.contact-section {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #383838;
+    color: var(--color1);
+    padding: 30px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.name,
+.email,
+.message {
+    width: 80%;
+    margin: 20px auto 0;
+}
+
+.input-field {
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid var(--color1);
+    caret-color: var(--color1);
+    color: var(--color1);
+}
+
+::placeholder {
+    color: var(--color1);
+    opacity: 0.8;
+    /* Firefox */
+}
+
+.project-btn {
+    background-color: var(--color1);
+}
+
+.error {
+    display: flex;
+    justify-content: space-around;
+    background: var(--white);
+    max-width: 1400px;
+    margin: auto;
+    height: 100%;
+}
+
+.error-page {
+    width: 50%;
+    color: var(--color1);
+    margin: 40px;
+
+}
+
+.error-page h1 {
+    font-size: 2rem;
+    color: var(--color1);
+    margin-bottom: 20px;
+}
+
+.error-page p {
+    margin-bottom: 12px;
+}
+
+.error-img img {
+    width: 100%;
+
+}
+
+.error-links li {
+    list-style: none;
+}
+
+.error-links li a {
+    text-decoration: none;
+    color: var(--color1);
+}
+
+@media only screen and (max-width:480px) {
+
+    .name,
+    .email,
+    .message {
+        width: 100%;
+        margin: 15px;
+    }
+
+    .error {
+        flex-direction: column-reverse;
+        height: 100vh;
+    }
+
+    .error-page {
+        margin: 0 20px;
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width:180px) {
+
+    .name,
+    .email,
+    .message {
+        margin: 5px auto 0;
+        font-size: 9px;
+    }
+}

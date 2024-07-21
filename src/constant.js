@@ -97,16 +97,17 @@ export const experiences = [
         'company': 'Trasol',
         'role': 'UI Developer',
         'duration': 'August 2021 - July 2022',
-        'logo': 'https://trasol.in/wp-content/uploads/2021/12/trasol-logo-2.png',
+        'logo': 'https://github.com/sathishkumarvbtech/Portfolio/blob/main/src/asset/images/trasol.jpg?raw=true',
         'points': [
             'Experience in front-end and web development, including successful development of landing pages and websites.',
             'Gained experience with Git version control contributing to the development and maintenance of code repositories.',
-            'Worked on the application dashboard, making it more user-friendly and improving its overall functionality📱.'
+            'Worked on the application dashboard, making it more user-friendly and improving its overall functionality 📱.'
         ],
         'url': 'https://trasol.in/',
     },
 ]
 
+export const GifLink = "https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif";
 
 export const EMAIL_TEMPLATE_ID = "template_83d97h9";
 export const EMAIL_SERVICE_ID = "service_qw89t0c";
