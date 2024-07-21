@@ -1,0 +1,40 @@
+.projects {
+    max-width: 1400px;
+}
+
+.project-container {
+    padding: 35px;
+    color: #fff;
+}
+
+.project-container h3 {
+    color: var(--color1);
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.project-btn {
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width:480px) {
+    .project-container {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width:180px) {
+    .project-container h3 {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+
+    .project-container p {
+        font-size: 9px;
+        margin-bottom: 10px;
+    }
+
+    .project-btn {
+        margin-bottom: 10px;
+    }
+}

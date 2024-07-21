@@ -23,7 +23,7 @@ const Servicecard = ({ service }) => (
 );
 
 const SkillsSction = ({ skill }) => (
-    <div className='skill-icon'>
+    <div className='icon'>
         <img src={skill.icon} alt={skill.name} />
     </div>
 );
@@ -45,9 +45,12 @@ export const About = () => {
             </div>
 
             <div className='skills-section'>
-                {Skills.map((skill) => (
-                    <SkillsSction skill={skill} />
-                ))}
+                <h2>My Skills</h2>
+                <div className='icons-container'>
+                    {Skills.map((skill) => (
+                        <SkillsSction skill={skill} />
+                    ))}
+                </div>
             </div>
         </section>
     )

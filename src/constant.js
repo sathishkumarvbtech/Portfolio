@@ -77,10 +77,6 @@ export const Skills = [
         name: "Git",
         icon: "https://github.com/sathishkumarvbtech/Portfolio/blob/main/src/asset/icons/Git.svg?raw=true"
     },
-    {
-        name: "Github",
-        icon: "https://github.com/sathishkumarvbtech/Portfolio/blob/main/src/asset/icons/Github.svg?raw=true"
-    },
 ]
 
 export const experiences = [
