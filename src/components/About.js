@@ -2,6 +2,7 @@ import React from 'react';
 import { services, Skills } from '../constant';
 import { Buttonlink } from './Buttonlink';
 import './css/about.css';
+import { Footer } from './Footer';
 
 const Servicecard = ({ service }) => (
     <div className="flip-card">
@@ -52,6 +53,7 @@ export const About = () => {
                     ))}
                 </div>
             </div>
+            <Footer />
         </section>
     )
 }

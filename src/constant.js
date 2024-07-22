@@ -107,6 +107,34 @@ export const experiences = [
     },
 ]
 
+export const socialmedias = [
+    {
+        icon: "https://github.com/sathishkumarvbtech/Portfolio/blob/main/src/asset/icons/Gmail.gif?raw=true",
+        url: "mailto:sathishkumarvbtech@gmail.com",
+        alt: "Gmail",
+        target: "Self"
+    },
+    {
+        icon: "https://github.com/sathishkumarvbtech/Portfolio/blob/main/src/asset/icons/Linkedin.gif?raw=true",
+        url: "https://www.linkedin.com/in/sathishkumar-v-5537b8148",
+        alt: "Linkedin",
+        target: "_blank"
+    },
+    {
+        icon: "https://github.com/sathishkumarvbtech/Portfolio/blob/main/src/asset/icons/Github.gif?raw=true",
+        url: "https://github.com/sathishkumarvbtech",
+        alt: "Github",
+        target: "_blank"
+    },
+    {
+        icon: "https://github.com/sathishkumarvbtech/Portfolio/blob/main/src/asset/icons/Whatsapp.gif?raw=true",
+        url: "https://wa.me/918056686885",
+        alt: "Whatsapp",
+        target: "_blank"
+    }
+
+]
+
 export const GifLink = "https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif";
 
 export const EMAIL_TEMPLATE_ID = "template_83d97h9";

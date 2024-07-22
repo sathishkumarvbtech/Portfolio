@@ -3,6 +3,7 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 import { experiences } from '../constant';
 import './css/experience.css';
+import { Footer } from './Footer';
 
 export const Experience = () => {
     return (
@@ -41,6 +42,7 @@ export const Experience = () => {
                     </VerticalTimelineElement>
                 ))}
             </VerticalTimeline>
+            <Footer />
         </section>
     )
 }

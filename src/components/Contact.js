@@ -4,6 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { EMAIL_PUBLIC_KEY, EMAIL_SERVICE_ID, EMAIL_TEMPLATE_ID } from "../constant";
 import './css/contact.css';
+import { Footer } from './Footer';
 
 export const Contact = () => {
     const formRef = useRef();
@@ -81,60 +82,62 @@ export const Contact = () => {
     };
 
     return (
-
-        <div className='contact'>
-            <div className='contact-section' id='contact'>
-                <div>
-                    <h2>REACH OUT TO ME</h2>
-                    <form
-                        ref={formRef}
-                        onSubmit={handleSubmit}
-                    >
-
-                        <div className="name">
-                            <input
-                                type='text'
-                                name='name'
-                                value={form.name}
-                                onChange={handleChange}
-                                placeholder="Enter your name"
-                                className='input-field'
-                            />
-                        </div>
-
-                        <div className="email">
-                            <input
-                                type='email'
-                                name='email'
-                                value={form.email}
-                                onChange={handleChange}
-                                placeholder="Ex:abc@gmail.com"
-                                className='input-field'
-
-                            />
-                        </div>
-
-                        <div className="message">
-                            <textarea
-                                rows={7}
-                                name='message'
-                                value={form.message}
-                                onChange={handleChange}
-                                placeholder='Do you have anything to say?'
-                                className='input-field'
-                            />
-                        </div>
-                        <button
-                            type='submit'
-                            className='btn'
+        <section>
+            <div className='contact'>
+                <div className='contact-section' id='contact'>
+                    <div>
+                        <h2>REACH OUT TO ME</h2>
+                        <form
+                            ref={formRef}
+                            onSubmit={handleSubmit}
                         >
-                            {loading ? "Sending..." : "Send"}
-                        </button>
-                    </form>
+
+                            <div className="name">
+                                <input
+                                    type='text'
+                                    name='name'
+                                    value={form.name}
+                                    onChange={handleChange}
+                                    placeholder="Enter your name"
+                                    className='input-field'
+                                />
+                            </div>
+
+                            <div className="email">
+                                <input
+                                    type='email'
+                                    name='email'
+                                    value={form.email}
+                                    onChange={handleChange}
+                                    placeholder="Ex:abc@gmail.com"
+                                    className='input-field'
+
+                                />
+                            </div>
+
+                            <div className="message">
+                                <textarea
+                                    rows={7}
+                                    name='message'
+                                    value={form.message}
+                                    onChange={handleChange}
+                                    placeholder='Do you have anything to say?'
+                                    className='input-field'
+                                />
+                            </div>
+                            <button
+                                type='submit'
+                                className='btn'
+                            >
+                                {loading ? "Sending..." : "Send"}
+                            </button>
+                        </form>
+                    </div>
+                    <ToastContainer />
                 </div>
-                <ToastContainer />
             </div>
-        </div>
+            <Footer />
+        </section>
     );
 
 }

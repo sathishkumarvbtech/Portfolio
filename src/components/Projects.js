@@ -2,6 +2,7 @@ import React from 'react';
 import { ValueofProjects } from '../constant';
 import { Buttonlink } from './Buttonlink';
 import './css/project.css';
+import { Footer } from './Footer';
 
 const ProjectValues = ({ project }) => (
     <div className='project-container'>
@@ -18,6 +19,7 @@ export const Projects = () => {
             {ValueofProjects.map((project) => (
                 <ProjectValues project={project} />
             ))}
+            <Footer />
         </section>
     )
 }
