@@ -3,6 +3,7 @@ import videoBg from '../asset/Background.mp4';
 import { name } from '../constant';
 import { Buttonlink } from './Buttonlink';
 import './css/home.css';
+import { Footer } from './Footer';
 export const Home = () => {
 
     const ref = useRef(0);
@@ -41,6 +42,7 @@ export const Home = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </section>
     )
 }
