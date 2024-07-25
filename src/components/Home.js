@@ -1,15 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
-import videoBg from '../asset/Background.mp4';
-import { name } from '../constant';
+import { name, slides } from '../constant';
 import { Buttonlink } from './Buttonlink';
 import './css/home.css';
 import { Footer } from './Footer';
 
 
 export const Home = () => {
-
     const ref = useRef(0);
     const [text, setText] = useState('');
+    const [currentIndex, setCurrentIndex] = useState(0)
 
     useEffect(() => {
         const Interval = setInterval(() => {
@@ -17,23 +16,31 @@ export const Home = () => {
                 ref.current++;
                 setText(() => text + name[ref.current - 1]);
             }
-        }, 500);
+        }, 1000);
         return () => clearInterval(Interval)
     }, [text]);
 
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            currentIndex === 3 ? setCurrentIndex(0) : setCurrentIndex(currentIndex + 1)
+        }, 5000)
+        return (() => clearTimeout(timer))
+    }, [currentIndex])
 
-    const heronSection = () => {
-
-    }
+    // const goToNext = () => {
+    //     const isLastSlide = currentIndex === slides.length - 1;
+    //     const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    //     setCurrentIndex(newIndex)
+    // }
 
     return (
-        <section className='Home'>
-            <div className='Home_section'>
+        <section className='Home' >
+            <div className='Home_section' style={{ backgroundImage: `url(${slides[currentIndex].url})` }}>
                 <div className='Overlay'></div>
-                <video autoPlay loop muted>
+                {/* <video autoPlay loop muted>
                     <source src={videoBg} type='video/mp4' />
                     <source src={videoBg} type="video/ogg" />
-                </video>
+                </video> */}
                 <div className='Home_section--intro'>
                     <div>
                         <div className='content'>

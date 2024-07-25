@@ -18,7 +18,7 @@ export const Navbar = () => {
                         <li><NavLink to='/' className='nav-link'>Home</NavLink></li>
                         <li><NavLink to='/about' className='nav-link' activeClassName="active">About</NavLink></li>
                         <li><NavLink to='/projects' className='nav-link' activeClassName="active">Projects</NavLink></li>
-                        <li><NavLink to='/experience' className='nav-link' activeClassName="active">Experince</NavLink></li>
+                        <li><NavLink to='/experience' className='nav-link' activeClassName="active">Experience</NavLink></li>
                         <li><NavLink to='/contact' className='nav-link' activeClassName="active">Contact</NavLink></li>
                         <li> <Buttonlink url={'/'} text={'View Resume →'} cssClass={'nav-btn'} /></li>
 

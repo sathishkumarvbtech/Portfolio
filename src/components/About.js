@@ -13,10 +13,11 @@ const Servicecard = ({ service }) => (
             <div className="flip-card-inner">
                 <div className='card-overlay'></div>
                 <div class="flip-card-front">
-                    {service.front}
+                    <h3>{service.front}</h3>
                 </div>
                 <div className="flip-card-back">
-                    {service.back}
+                    <p>{service.back}</p>
+                    <Buttonlink url={"/contacts"} cssClass={"btn btn3"} text={"Book a service"} />
                 </div>
             </div>
         </div>

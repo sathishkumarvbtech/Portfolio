@@ -1,19 +1,19 @@
 export const services = [
     {
         front: "Front-end",
-        back: 'Deve',
+        back: 'The frontend technologies used are HTML, CSS, JavaScript, SASS for the CSS preprocessor, Bootstrap and Tailwind CSS frameworks, React JS javascript frameworks, and Redux for the store management tool.',
         image: "https://github.com/sathishkumarvbtech/Portfolio/blob/main/src/asset/images/Front-end.jpg?raw=true",
         description: "",
     },
     {
         front: "Back-end",
-        back: 'Deve',
+        back: 'The backend technologies used are Java, Springboot, and MySQL with API interaction.',
         image: "https://github.com/sathishkumarvbtech/Portfolio/blob/main/src/asset/images/Back-end.jpg?raw=true",
         description: "",
     },
     {
         front: "Full-stack",
-        back: 'Deve',
+        back: 'Full-stack technologies combine frontend and backend with modern technologies.',
         image: "https://github.com/sathishkumarvbtech/Portfolio/blob/main/src/asset/images/Full-stack.jpg?raw=true",
         description: "",
     },
@@ -134,6 +134,24 @@ export const socialmedias = [
     }
 
 ]
+
+
+export const slides = [
+    {
+        url: "https://github.com/sathishkumarvbtech/Portfolio/blob/main/src/asset/background/background-1.jpg?raw=true",
+    },
+    {
+        url: "https://github.com/sathishkumarvbtech/Portfolio/blob/main/src/asset/background/background-2.jpg?raw=true",
+    },
+    {
+        url: "https://github.com/sathishkumarvbtech/Portfolio/blob/main/src/asset/background/background-3.jpg?raw=true",
+    },
+    {
+        url: "https://github.com/sathishkumarvbtech/Portfolio/blob/main/src/asset/background/background-4.jpg?raw=true",
+    },
+
+]
+
 
 export const GifLink = "https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif";
 

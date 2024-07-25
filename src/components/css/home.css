@@ -17,14 +17,13 @@
 .Home_section {
     width: 100%;
     height: 100%;
-}
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 800ms ease-in;
+    animation: sideIn 1s cubic-bezier(0.4, 0.29, 0.01, 1);
 
-.Home_section video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
-
 
 .Overlay {
     position: absolute;
@@ -154,5 +153,16 @@
 
     100% {
         height: 100%;
+    }
+}
+
+
+@keyframes sideIn {
+    0% {
+        filter: blur(15px);
+    }
+
+    100% {
+        filter: blur(0);
     }
 }

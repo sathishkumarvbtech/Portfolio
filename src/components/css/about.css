@@ -98,6 +98,22 @@ h2 {
     flex-direction: column;
     align-items: center;
     top: 50%;
+    text-align: center;
+}
+
+.flip-card-back {
+    top: 20%;
+    font-size: 14px;
+}
+
+.flip-card-front h3 {
+    color: var(--white);
+}
+
+.btn3 {
+    background-color: var(--color1);
+    margin-top: 10px;
+    font-size: 14px;
 }
 
 /* Style the front side (fallback if image is missing) */
