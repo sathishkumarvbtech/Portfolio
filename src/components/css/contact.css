@@ -5,7 +5,7 @@
 .contact-section {
     max-width: 900px;
     margin: 40px auto;
-    background-color: #7e7e7e;
+    background-color: #353434;
     color: var(--color1);
     padding: 30px;
     border-radius: 5px;
@@ -30,6 +30,14 @@
     caret-color: var(--color1);
     color: var(--color1);
 }
+
+.btn-hover {
+    border: 2px solid var(--color1) !important;
+    color: var(--color1) !important;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
 
 ::placeholder {
     color: var(--color1);

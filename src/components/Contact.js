@@ -127,7 +127,7 @@ export const Contact = () => {
                             </div>
                             <button
                                 type='submit'
-                                className='btn'
+                                className='btn btn-hover'
                             >
                                 {loading ? "Sending..." : "Send"}
                             </button>

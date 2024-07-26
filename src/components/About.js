@@ -17,7 +17,7 @@ const Servicecard = ({ service }) => (
                 </div>
                 <div className="flip-card-back">
                     <p>{service.back}</p>
-                    <Buttonlink url={"/contacts"} cssClass={"btn btn3"} text={"Book a service"} />
+                    <Buttonlink url={"https://sathishkumarvbtech.github.io/Portfolio/#/contact"} cssClass={"btn btn3"} text={"Book a service"} />
                 </div>
             </div>
         </div>

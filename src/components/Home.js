@@ -51,7 +51,7 @@ export const Home = () => {
 
                         <div className='Home-buttons'>
                             <Buttonlink url={'/'} text={'Hire Me'} cssClass={'btn btn1'} />
-                            <Buttonlink url={'/'} text={'My Projects'} cssClass={'btn btn1'} />
+                            <Buttonlink url={'https://sathishkumarvbtech.github.io/Portfolio/#/projects'} text={'My Projects'} cssClass={'btn btn1'} />
                         </div>
                     </div>
                 </div>
