@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import Nopage from './components/404Page';
 import About from './components/About';
 import Contact from './components/Contact';
@@ -25,7 +25,7 @@ function App() {
     <div>
       {
         isLoading ? <Preloader /> :
-          <BrowserRouter>
+          <HashRouter>
             <Routes>
               <Route path="/" element={<Navbar />}>
                 <Route index element={<Home />} />
@@ -36,7 +36,7 @@ function App() {
                 <Route path="*" element={<Nopage />} />
               </Route>
             </Routes>
-          </BrowserRouter>
+          </HashRouter>
       }
     </div>
   );
