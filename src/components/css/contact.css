@@ -144,7 +144,7 @@
         width: 100%;
     }
 
-    .footer {
+    .footer-container {
         flex-direction: column;
     }
 
