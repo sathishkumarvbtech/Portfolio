@@ -13,16 +13,18 @@ const FooterIcons = ({ socialmedia }) => (
 export const Footer = () => {
     const year = new Date().getFullYear();
     return (
-        <section className='footer'>
-            <div className='footer-contents'>
-                <p>&copy; {year} Sathish. All rights reserved.</p>
-            </div>
-            <div className='social-medias'>
-                {socialmedias.map((socialmedia) => (
-                    <FooterIcons socialmedia={socialmedia} />
+        <div className='footer'>
+            <div className="footer-container">
+                <div className='footer-contents'>
+                    <p>&copy; {year} Sathish. All rights reserved.</p>
+                </div>
+                <div className='social-medias'>
+                    {socialmedias.map((socialmedia) => (
+                        <FooterIcons socialmedia={socialmedia} />
 
-                ))}
+                    ))}
+                </div>
             </div>
-        </section>
+        </div>
     )
 }

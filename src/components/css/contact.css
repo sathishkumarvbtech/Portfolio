@@ -1,5 +1,5 @@
 .contact {
-    max-width: 1400px;
+    max-width: 2000px;
 }
 
 .contact-section {
@@ -53,7 +53,7 @@
     display: flex;
     justify-content: space-around;
     background: var(--white);
-    max-width: 1400px;
+    max-width: 2000px;
     margin: auto;
     height: 100%;
 }
@@ -90,8 +90,13 @@
 }
 
 .footer {
-    max-width: 1400px;
-    background-color: var(--color1);
+    position: relative;
+    width: 100%;
+    background: var(--color1);
+}
+
+.footer-container {
+    max-width: 2000px;
     padding: 20px;
     margin: auto;
     display: flex;
