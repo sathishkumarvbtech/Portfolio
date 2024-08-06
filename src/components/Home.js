@@ -16,14 +16,14 @@ export const Home = () => {
                 ref.current++;
                 setText(() => text + name[ref.current - 1]);
             }
-        }, 1000);
+        }, 700);
         return () => clearInterval(Interval)
     }, [text]);
 
     useEffect(() => {
         const timer = setTimeout(() => {
             currentIndex === 3 ? setCurrentIndex(0) : setCurrentIndex(currentIndex + 1)
-        }, 5000)
+        }, 9000)
         return (() => clearTimeout(timer))
     }, [currentIndex])
 
