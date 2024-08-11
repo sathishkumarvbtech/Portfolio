@@ -16,15 +16,26 @@ export const Home = () => {
                 ref.current++;
                 setText(() => text + name[ref.current - 1]);
             }
-        }, 700);
+        }, 500);
         return () => clearInterval(Interval)
     }, [text]);
 
+
     useEffect(() => {
-        const timer = setTimeout(() => {
-            currentIndex === 3 ? setCurrentIndex(0) : setCurrentIndex(currentIndex + 1)
-        }, 9000)
-        return (() => clearTimeout(timer))
+        const lastIndex = 2;
+        if (currentIndex < 0) {
+            setCurrentIndex(lastIndex);
+        }
+        if (currentIndex > lastIndex) {
+            setCurrentIndex(0);
+        }
+    }, [currentIndex]);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentIndex(currentIndex + 1)
+        }, 6000)
+        return (() => clearInterval(timer))
     }, [currentIndex])
 
     // const goToNext = () => {
