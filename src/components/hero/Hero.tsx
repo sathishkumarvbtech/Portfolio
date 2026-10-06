@@ -109,7 +109,7 @@ export default function Hero() {
     <section
       id="hero"
       ref={heroRef}
-      className="relative min-h-[100svh] w-full flex flex-col justify-between pt-24 pb-8 overflow-hidden bg-[var(--paper)] transition-colors duration-300"
+      className="relative min-h-svh w-full flex flex-col justify-between pt-24 pb-8 overflow-hidden bg-(--paper) transition-colors duration-300"
       aria-label="Hero Section"
     >
       {/* Giant Upper Background Watermark Text */}
@@ -117,7 +117,7 @@ export default function Hero() {
         className="absolute top-20 left-0 right-0 w-full text-center pointer-events-none select-none z-0 overflow-hidden"
         aria-hidden="true"
       >
-        <span className="font-mono text-[10vw] sm:text-[11vw] lg:text-[12.5vw] font-black uppercase tracking-tighter text-[var(--ink)]/[0.06] dark:text-[var(--ink)]/[0.04] leading-none block whitespace-nowrap px-4">
+        <span className="font-mono text-[10vw] sm:text-[11vw] lg:text-[12.5vw] font-black uppercase tracking-tighter text-[var(--ink)] opacity-[0.06] dark:opacity-[0.04] leading-none block whitespace-nowrap px-4">
           {PROFILE.name}
         </span>
       </div>
@@ -145,9 +145,9 @@ export default function Hero() {
             {/* Animated Soundwave / Mute Icon */}
             {isPlayingSound ? (
               <div className="flex items-end gap-0.5 h-3">
-                <span className="w-0.5 h-full bg-[var(--paper)] animate-[bounce_0.6s_infinite_100ms]" />
-                <span className="w-0.5 h-2/3 bg-[var(--paper)] animate-[bounce_0.6s_infinite_200ms]" />
-                <span className="w-0.5 h-full bg-[var(--paper)] animate-[bounce_0.6s_infinite_300ms]" />
+                <span className="w-0.5 h-full bg-(--paper) animate-[bounce_0.6s_infinite_100ms]" />
+                <span className="w-0.5 h-2/3 bg-(--paper) animate-[bounce_0.6s_infinite_200ms]" />
+                <span className="w-0.5 h-full bg-(--paper) animate-[bounce_0.6s_infinite_300ms]" />
               </div>
             ) : (
               <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">

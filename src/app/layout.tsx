@@ -91,8 +91,16 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${interTight.variable} ${instrumentSerifRegular.variable} ${instrumentSerifItalic.variable} ${jetbrainsMono.variable}`}
+      suppressHydrationWarning
     >
-      <body className="antialiased selection:bg-[var(--ink)] selection:text-[var(--paper)]">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var s=localStorage.getItem('portfolio-theme');var d=s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme: dark)').matches);if(d){document.documentElement.classList.add('dark');document.documentElement.setAttribute('data-theme','dark');}else{document.documentElement.classList.remove('dark');document.documentElement.setAttribute('data-theme','light');}}catch(e){}})();`,
+          }}
+        />
+      </head>
+      <body className="antialiased selection:bg-(--ink) selection:text-(--paper)">
         <ThemeProvider>
           <ScrollProvider>{children}</ScrollProvider>
         </ThemeProvider>

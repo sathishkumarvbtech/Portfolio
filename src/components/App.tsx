@@ -12,7 +12,7 @@ import RevealObserver from "./ui/RevealObserver";
 
 export default function App() {
   return (
-    <main className="relative min-h-screen bg-[#f4f2ee] text-[#0d0d0d] selection:bg-[#0d0d0d] selection:text-[#f4f2ee]">
+    <main className="relative min-h-screen bg-(--paper) text-(--ink) transition-colors duration-300 selection:bg-(--ink) selection:text-(--paper)">
       <RevealObserver />
       <Navigation />
       <Hero />

@@ -123,6 +123,7 @@ interface TechLogoProps {
 export default function TechLogo({ brandKey, conceptIcon, size = 150, className = "" }: TechLogoProps) {
   if (brandKey && isBrand(brandKey)) {
     const brand = BRAND_MAP[brandKey];
+    const isMonochrome = brandKey === "nextjs" || brandKey === "express" || brandKey === "github";
     return (
       <div
         className={`relative flex items-center justify-center ${className}`}
@@ -138,7 +139,9 @@ export default function TechLogo({ brandKey, conceptIcon, size = 150, className 
           alt={brand.alt}
           width={size}
           height={size}
-          className="relative z-10 object-contain drop-shadow-sm transition-transform duration-300 hover:scale-110"
+          className={`relative z-10 object-contain drop-shadow-sm transition-transform duration-300 hover:scale-110 ${
+            isMonochrome ? "dark:invert" : ""
+          }`}
         />
       </div>
     );
@@ -147,7 +150,7 @@ export default function TechLogo({ brandKey, conceptIcon, size = 150, className 
   if (conceptIcon && conceptIcon in CONCEPT_MAP) {
     return (
       <div
-        className={`flex items-center justify-center text-[#0d0d0d] ${className}`}
+        className={`flex items-center justify-center text-[var(--ink)] ${className}`}
         style={{ width: `${size}px`, height: `${size}px` }}
       >
         {CONCEPT_MAP[conceptIcon]}
@@ -157,7 +160,7 @@ export default function TechLogo({ brandKey, conceptIcon, size = 150, className 
 
   return (
     <div
-      className={`flex items-center justify-center text-[#77756f] font-mono text-sm border border-[#0d0d0d]/10 rounded-full ${className}`}
+      className={`flex items-center justify-center text-[var(--mute)] font-mono text-sm border border-[var(--line)] rounded-full ${className}`}
       style={{ width: `${size}px`, height: `${size}px` }}
     >
       DEV

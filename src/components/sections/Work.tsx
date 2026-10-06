@@ -4,7 +4,7 @@ import AccordionGallery from "../ui/AccordionGallery";
 
 export default function Work() {
   return (
-    <section id="work" className="site-container section-padding border-t border-[#0d0d0d]/10">
+    <section id="work" className="site-container section-padding border-t border-[var(--line)]">
       
       {/* Section Tag */}
       <div className="rv" style={{ "--i": 1 } as React.CSSProperties}>

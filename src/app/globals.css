@@ -1,16 +1,18 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer base {
   :root {
     --paper: #f4f2ee;
     --card: #ffffff;
     --ink: #0d0d0d;
     --ink-2: #3a3a3a;
-    --mute: #77756f;
-    --faint: #a9a6a0;
-    --line: rgba(13, 13, 13, 0.1);
+    --mute: #6e6c66;
+    --faint: #9c9993;
+    --line: rgba(13, 13, 13, 0.12);
     --soft: #e9e6e0;
-    --nav-bg: rgba(255, 255, 255, 0.75);
+    --nav-bg: rgba(244, 242, 238, 0.82);
     --nav-border: rgba(13, 13, 13, 0.1);
     --shadow-subtle: rgba(0, 0, 0, 0.06);
     --ease: cubic-bezier(0.16, 1, 0.3, 1);
@@ -27,8 +29,8 @@
     --ink: #f4f2ee;
     --ink-2: #c8c5be;
     --mute: #96938c;
-    --faint: #5e5c57;
-    --line: rgba(244, 242, 238, 0.12);
+    --faint: #6e6c66;
+    --line: rgba(244, 242, 238, 0.14);
     --soft: #1c1c20;
     --nav-bg: rgba(19, 19, 22, 0.85);
     --nav-border: rgba(244, 242, 238, 0.15);
