@@ -16,7 +16,7 @@ export default function Contact() {
   const titleLines = ["Let's build", "something together."];
 
   return (
-    <section id="contact" className="site-container section-padding border-t border-[#0d0d0d]/10 flex flex-col justify-between min-h-[90vh]">
+    <section id="contact" className="site-container section-padding border-t border-[var(--line)] flex flex-col justify-between min-h-[90vh]">
       
       {/* Top Section Tag */}
       <div className="rv space-y-2" style={{ "--i": 1 } as React.CSSProperties}>
@@ -28,14 +28,14 @@ export default function Contact() {
         {titleLines.map((line, lIdx) => (
           <h2
             key={lIdx}
-            className="section-heading text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tighter flex flex-wrap gap-x-2 sm:gap-x-4 select-none"
+            className="section-heading text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tighter flex flex-wrap gap-x-2 sm:gap-x-4 select-none text-[var(--ink)]"
           >
             {line.split(" ").map((word, wIdx) => (
               <span key={wIdx} className="inline-flex overflow-hidden py-2">
                 {word.split("").map((char, cIdx) => (
                   <span
                     key={cIdx}
-                    className="inline-block transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-4 cursor-default hover:text-[#77756f]"
+                    className="inline-block transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-4 cursor-default hover:text-[var(--mute)]"
                   >
                     {char}
                   </span>
@@ -50,7 +50,7 @@ export default function Contact() {
         <div className="pt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <a
             href={`mailto:${PROFILE.email}`}
-            className="text-xl sm:text-3xl md:text-4xl font-mono font-bold text-[#0d0d0d] underline underline-offset-8 decoration-2 hover:text-[#77756f] transition-colors"
+            className="text-xl sm:text-3xl md:text-4xl font-mono font-bold text-[var(--ink)] underline underline-offset-8 decoration-2 hover:text-[var(--mute)] transition-colors"
           >
             {PROFILE.email}
           </a>
@@ -58,7 +58,7 @@ export default function Contact() {
           {/* Copy Chip with aria-live */}
           <button
             onClick={handleCopyEmail}
-            className="px-4 py-2 rounded-full bg-white border border-[#0d0d0d]/15 text-xs font-semibold text-[#0d0d0d] hover:bg-[#0d0d0d] hover:text-[#f4f2ee] shadow-sm transition-all duration-200"
+            className="px-4 py-2 rounded-full bg-[var(--card)] border border-[var(--line)] text-xs font-semibold text-[var(--ink)] hover:bg-[var(--ink)] hover:text-[var(--paper)] shadow-sm transition-all duration-200"
             aria-label="Copy email address to clipboard"
           >
             {copied ? "Copied ✓" : "Copy email"}
@@ -72,14 +72,14 @@ export default function Contact() {
         <div className="pt-6 flex flex-wrap items-center gap-6 text-sm font-semibold">
           <a
             href={PROFILE.phoneHrefUAE}
-            className="flex items-center gap-2 hover:underline text-[#0d0d0d]"
+            className="flex items-center gap-2 hover:underline text-[var(--ink)]"
           >
             <span>🇦🇪 UAE:</span>
             <span>{PROFILE.phoneUAE}</span>
           </a>
           <a
             href={PROFILE.phoneHrefIndia}
-            className="flex items-center gap-2 hover:underline text-[#0d0d0d]"
+            className="flex items-center gap-2 hover:underline text-[var(--ink)]"
           >
             <span>🇮🇳 India:</span>
             <span>{PROFILE.phoneIndia}</span>
@@ -96,7 +96,7 @@ export default function Contact() {
       </div>
 
       {/* Rotating Circular 'Say Hello' Badge & Footer */}
-      <div className="pt-12 border-t border-[#0d0d0d]/10 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div className="pt-12 border-t border-[var(--line)] flex flex-col sm:flex-row items-center justify-between gap-6">
         
         {/* Rotating SVG Badge */}
         <div className="relative w-24 h-24 flex items-center justify-center">
@@ -109,22 +109,22 @@ export default function Contact() {
               d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
               fill="none"
             />
-            <text className="font-mono text-[9px] uppercase font-bold fill-[#0d0d0d] tracking-widest">
+            <text className="font-mono text-[9px] uppercase font-bold fill-[var(--ink)] tracking-widest">
               <textPath href="#circlePath" startOffset="0%">
                 • SAY HELLO • GET IN TOUCH • SATHISHKUMAR V
               </textPath>
             </text>
           </svg>
-          <div className="absolute w-3 h-3 rounded-full bg-[#0d0d0d]" />
+          <div className="absolute w-3 h-3 rounded-full bg-[var(--ink)]" />
         </div>
 
         {/* Footer Lines */}
-        <div className="flex flex-col sm:flex-row items-center gap-6 font-mono text-xs text-[#77756f]">
+        <div className="flex flex-col sm:flex-row items-center gap-6 font-mono text-xs text-[var(--mute)]">
           <span>© {new Date().getFullYear()} {PROFILE.name}</span>
           <span>•</span>
           <button
             onClick={() => scrollToTarget("hero")}
-            className="hover:text-[#0d0d0d] underline underline-offset-4"
+            className="hover:text-[var(--ink)] underline underline-offset-4"
           >
             Back to top ↑
           </button>

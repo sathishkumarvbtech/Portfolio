@@ -5,7 +5,7 @@ import IdCard from "../ui/IdCard";
 
 export default function About() {
   return (
-    <section id="about" className="site-container section-padding border-t border-[#0d0d0d]/10">
+    <section id="about" className="site-container section-padding border-t border-[var(--line)]">
       
       {/* Section Tag */}
       <div className="rv" style={{ "--i": 1 } as React.CSSProperties}>
@@ -21,20 +21,20 @@ export default function About() {
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.1fr)_310px_minmax(0,1fr)] gap-8 items-stretch">
         
         {/* Left Column: Summary & CTAs */}
-        <div className="rv card-surface p-7 md:p-8 flex flex-col justify-between rounded-[28px] bg-white border border-[#0d0d0d]/10 shadow-sm hover:shadow-md transition-shadow" style={{ "--i": 3 } as React.CSSProperties}>
+        <div className="rv card-surface p-7 md:p-8 flex flex-col justify-between rounded-[28px] bg-[var(--card)] border border-[var(--line)] shadow-sm hover:shadow-md transition-shadow" style={{ "--i": 3 } as React.CSSProperties}>
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-[#0d0d0d] tracking-tight">
+            <h3 className="text-2xl font-bold text-[var(--ink)] tracking-tight">
               Hi, I&apos;m {PROFILE.name}.
             </h3>
-            <p className="text-[#3a3a3a] leading-relaxed text-sm md:text-base font-normal">
+            <p className="text-[var(--ink-2)] leading-relaxed text-sm md:text-base font-normal">
               {PROFILE.resumeSummary}
             </p>
-            <p className="text-[#77756f] leading-relaxed text-xs md:text-sm">
+            <p className="text-[var(--mute)] leading-relaxed text-xs md:text-sm">
               {PROFILE.additionalSummary}
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-3 pt-6 border-t border-[#0d0d0d]/10 mt-6">
+          <div className="flex flex-wrap items-center gap-3 pt-6 border-t border-[var(--line)] mt-6">
             <a
               href={PROFILE.resumePath}
               download
@@ -59,34 +59,34 @@ export default function About() {
         </div>
 
         {/* Right Column: Quick Facts & Paraphrased Quote */}
-        <div className="rv card-surface p-7 md:p-8 flex flex-col justify-between rounded-[28px] bg-white border border-[#0d0d0d]/10 shadow-sm hover:shadow-md transition-shadow" style={{ "--i": 5 } as React.CSSProperties}>
+        <div className="rv card-surface p-7 md:p-8 flex flex-col justify-between rounded-[28px] bg-[var(--card)] border border-[var(--line)] shadow-sm hover:shadow-md transition-shadow" style={{ "--i": 5 } as React.CSSProperties}>
           <div className="space-y-5">
-            <h3 className="font-mono text-xs font-bold uppercase tracking-widest text-[#77756f] border-b border-[#0d0d0d]/10 pb-3">
+            <h3 className="font-mono text-xs font-bold uppercase tracking-widest text-[var(--mute)] border-b border-[var(--line)] pb-3">
               Quick Facts
             </h3>
 
             <div className="space-y-3.5 text-xs md:text-sm">
               <div>
-                <span className="block font-mono text-[10px] text-[#a9a6a0] uppercase tracking-wider">LOCATION</span>
-                <span className="font-semibold text-[#0d0d0d]">{PROFILE.location}</span>
+                <span className="block font-mono text-[10px] text-[var(--faint)] uppercase tracking-wider">LOCATION</span>
+                <span className="font-semibold text-[var(--ink)]">{PROFILE.location}</span>
               </div>
               <div>
-                <span className="block font-mono text-[10px] text-[#a9a6a0] uppercase tracking-wider">EDUCATION</span>
-                <span className="font-semibold text-[#0d0d0d]">
+                <span className="block font-mono text-[10px] text-[var(--faint)] uppercase tracking-wider">EDUCATION</span>
+                <span className="font-semibold text-[var(--ink)]">
                   B.Tech in IT (K.S.R. Institute for Enginering and Technology) · CGPA: 7.34
                 </span>
               </div>
               <div>
-                <span className="block font-mono text-[10px] text-[#a9a6a0] uppercase tracking-wider">CURRENT ROLE</span>
-                <span className="font-semibold text-[#0d0d0d]">
+                <span className="block font-mono text-[10px] text-[var(--faint)] uppercase tracking-wider">CURRENT ROLE</span>
+                <span className="font-semibold text-[var(--ink)]">
                   Senior Software Engineer · Cloudgate Host Solution
                 </span>
               </div>
               <div>
-                <span className="block font-mono text-[10px] text-[#a9a6a0] uppercase tracking-wider">EMAIL</span>
+                <span className="block font-mono text-[10px] text-[var(--faint)] uppercase tracking-wider">EMAIL</span>
                 <a
                   href={`mailto:${PROFILE.email}`}
-                  className="font-semibold text-[#0d0d0d] hover:underline"
+                  className="font-semibold text-[var(--ink)] hover:underline"
                 >
                   {PROFILE.email}
                 </a>
@@ -95,8 +95,8 @@ export default function About() {
           </div>
 
           {/* Quote paraphrased strictly from resume wording */}
-          <div className="pt-5 border-t border-[#0d0d0d]/10 mt-6">
-            <blockquote className="font-serif italic text-sm md:text-base text-[#3a3a3a] leading-snug">
+          <div className="pt-5 border-t border-[var(--line)] mt-6">
+            <blockquote className="font-serif italic text-sm md:text-base text-[var(--ink-2)] leading-snug">
               &ldquo;Engineering high-throughput, secure, and production-scalable web applications with sub-second page rendering.&rdquo;
             </blockquote>
           </div>

@@ -4,7 +4,7 @@ import TimelinePath from "../ui/TimelinePath";
 
 export default function Experience() {
   return (
-    <section id="experience" className="site-container pt-20 md:pt-28 pb-12 md:pb-16 border-t border-[#0d0d0d]/10">
+    <section id="experience" className="site-container pt-20 md:pt-28 pb-12 md:pb-16 border-t border-[var(--line)]">
       
       {/* Section Tag */}
       <div className="rv" style={{ "--i": 1 } as React.CSSProperties}>

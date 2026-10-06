@@ -109,7 +109,7 @@ export default function Hero() {
     <section
       id="hero"
       ref={heroRef}
-      className="relative min-h-[100svh] w-full flex flex-col justify-between pt-24 pb-8 overflow-hidden bg-[#f4f2ee]"
+      className="relative min-h-[100svh] w-full flex flex-col justify-between pt-24 pb-8 overflow-hidden bg-[var(--paper)] transition-colors duration-300"
       aria-label="Hero Section"
     >
       {/* Giant Upper Background Watermark Text */}
@@ -117,7 +117,7 @@ export default function Hero() {
         className="absolute top-20 left-0 right-0 w-full text-center pointer-events-none select-none z-0 overflow-hidden"
         aria-hidden="true"
       >
-        <span className="font-mono text-[10vw] sm:text-[11vw] lg:text-[12.5vw] font-black uppercase tracking-tighter text-[#0d0d0d]/[0.085] leading-none block whitespace-nowrap px-4">
+        <span className="font-mono text-[10vw] sm:text-[11vw] lg:text-[12.5vw] font-black uppercase tracking-tighter text-[var(--ink)]/[0.06] dark:text-[var(--ink)]/[0.04] leading-none block whitespace-nowrap px-4">
           {PROFILE.name}
         </span>
       </div>
@@ -127,7 +127,7 @@ export default function Hero() {
         
         {/* Top Bar: Status Badge & Floating Sound Control */}
         <div className="flex items-center justify-between w-full pt-2 z-20">
-          <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/70 backdrop-blur-md border border-[#0d0d0d]/10 shadow-sm text-xs font-mono text-[#3a3a3a]">
+          <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[var(--card)]/80 backdrop-blur-md border border-[var(--line)] shadow-sm text-xs font-mono text-[var(--ink-2)]">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
             <span>Available for Senior Roles & Architecture</span>
           </div>
@@ -135,7 +135,7 @@ export default function Hero() {
           {/* Floating Sound Control Button */}
           <button
             onClick={toggleSound}
-            className="group relative px-4 py-2 rounded-full bg-[#0d0d0d] text-[#f4f2ee] flex items-center gap-2 text-xs font-semibold shadow-md hover:bg-[#222222] active:scale-95 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0d0d0d]"
+            className="group relative px-4 py-2 rounded-full bg-[var(--ink)] text-[var(--paper)] flex items-center gap-2 text-xs font-semibold shadow-md active:scale-95 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ink)]"
             aria-label={isPlayingSound ? "Mute video audio" : "Unmute video audio"}
           >
             {autoplayBlocked && (
@@ -145,9 +145,9 @@ export default function Hero() {
             {/* Animated Soundwave / Mute Icon */}
             {isPlayingSound ? (
               <div className="flex items-end gap-0.5 h-3">
-                <span className="w-0.5 h-full bg-[#f4f2ee] animate-[bounce_0.6s_infinite_100ms]" />
-                <span className="w-0.5 h-2/3 bg-[#f4f2ee] animate-[bounce_0.6s_infinite_200ms]" />
-                <span className="w-0.5 h-full bg-[#f4f2ee] animate-[bounce_0.6s_infinite_300ms]" />
+                <span className="w-0.5 h-full bg-[var(--paper)] animate-[bounce_0.6s_infinite_100ms]" />
+                <span className="w-0.5 h-2/3 bg-[var(--paper)] animate-[bounce_0.6s_infinite_200ms]" />
+                <span className="w-0.5 h-full bg-[var(--paper)] animate-[bounce_0.6s_infinite_300ms]" />
               </div>
             ) : (
               <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
@@ -159,7 +159,7 @@ export default function Hero() {
           </button>
         </div>
 
-        {/* Center Standing Cutout Video with Seamless Contrast/Multiply Mask */}
+        {/* Center Standing Cutout Video */}
         <div className="relative w-full flex-1 flex items-center justify-center my-auto z-10 pointer-events-none">
           <div className="relative h-[56svh] md:h-[68svh] lg:h-[74svh] aspect-[768/960] max-w-full">
             <video
@@ -169,7 +169,7 @@ export default function Hero() {
               loop
               playsInline
               preload="auto"
-              className="w-full h-full object-contain mix-blend-multiply select-none pointer-events-auto"
+              className="w-full h-full object-contain mix-blend-multiply dark:mix-blend-normal select-none pointer-events-auto"
               aria-label="Video introduction of Sathishkumar V"
             >
               <source src="/hero/hero.webm" type="video/webm" />
@@ -183,8 +183,8 @@ export default function Hero() {
           
           {/* Left Column: Kicker, Headline, Subtitle & Initials Mark */}
           <div className="lg:col-span-8 space-y-3">
-            <div className="flex items-center gap-2 font-mono text-xs text-[#77756f]">
-              <span className="font-bold uppercase tracking-widest text-[#0d0d0d]">
+            <div className="flex items-center gap-2 font-mono text-xs text-[var(--mute)]">
+              <span className="font-bold uppercase tracking-widest text-[var(--ink)]">
                 {PROFILE.name}
               </span>
               <span>—</span>
@@ -193,21 +193,21 @@ export default function Hero() {
               </span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.2rem] font-extrabold tracking-tight text-[#0d0d0d] leading-[1.02]">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.2rem] font-extrabold tracking-tight text-[var(--ink)] leading-[1.02]">
               Senior Software <br />
               Engineer & MERN Stack Developer.
             </h1>
 
-            <p className="text-sm md:text-base text-[#77756f] max-w-xl leading-relaxed font-medium">
+            <p className="text-sm md:text-base text-[var(--mute)] max-w-xl leading-relaxed font-medium">
               Engineering high-throughput, secure, and production-scalable web applications in React.js, Next.js & MERN architecture.
             </p>
 
             {/* Bottom Initials Badge */}
             <div className="pt-2 flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full bg-[#0d0d0d] text-[#f4f2ee] font-mono font-bold text-xs flex items-center justify-center shadow-md">
+              <div className="w-9 h-9 rounded-full bg-[var(--ink)] text-[var(--paper)] font-mono font-bold text-xs flex items-center justify-center shadow-md">
                 {PROFILE.initials}
               </div>
-              <span className="font-mono text-xs text-[#77756f]">
+              <span className="font-mono text-xs text-[var(--mute)]">
                 5+ Years Production Experience · Dubai & India
               </span>
             </div>
@@ -242,5 +242,3 @@ export default function Hero() {
     </section>
   );
 }
-
-

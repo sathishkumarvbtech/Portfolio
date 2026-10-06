@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <style>
+    :root {
+      --bg-fill: url(#bgDarkGrad);
+      --stroke-outer: #262626;
+      --stroke-inner: rgba(255, 255, 255, 0.1);
+      --text-stroke: url(#textDarkGrad);
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg-fill: url(#bgLightGrad);
+        --stroke-outer: #d4cecf;
+        --stroke-inner: rgba(0, 0, 0, 0.08);
+        --text-stroke: url(#textLightGrad);
+      }
+    }
+    .bg-circle { fill: var(--bg-fill); stroke: var(--stroke-outer); }
+    .inner-ring { stroke: var(--stroke-inner); }
+    .mark-path { stroke: var(--text-stroke); }
+  </style>
+  <defs>
+    <linearGradient id="bgDarkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141414" />
+      <stop offset="100%" stop-color="#080808" />
+    </linearGradient>
+    <linearGradient id="textDarkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f0ece1" />
+    </linearGradient>
+    <linearGradient id="bgLightGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fcfbfa" />
+      <stop offset="100%" stop-color="#e9e5dd" />
+    </linearGradient>
+    <linearGradient id="textLightGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d0d0d" />
+      <stop offset="100%" stop-color="#1f1f1f" />
+    </linearGradient>
+  </defs>
+
+  <circle class="bg-circle" cx="256" cy="256" r="236" stroke-width="12" />
+  <circle class="inner-ring" cx="256" cy="256" r="218" fill="none" stroke-width="4" />
+
+  <g class="mark-path" stroke-width="38" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M 211,190 C 211,152 141,152 141,210 C 141,268 211,244 211,302 C 211,360 141,360 141,322" />
+    <path d="M 261,165 L 317,347 L 373,165" />
+  </g>
+</svg>

@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ScrollProvider } from "@/lib/scroll";
+import { ThemeProvider } from "@/lib/theme";
 
 const interTight = localFont({
   src: "../fonts/InterTight-Variable.woff2",
@@ -65,7 +66,13 @@ export const metadata: Metadata = {
     type: "website",
   },
   icons: {
-    icon: "/portrait-bust.webp",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/icon-light-32.png", media: "(prefers-color-scheme: light)" },
+      { url: "/icon-dark-32.png", media: "(prefers-color-scheme: dark)" },
+      { url: "/favicon.ico" },
+    ],
+    apple: "/apple-touch-icon.png",
   },
 };
 
@@ -85,9 +92,12 @@ export default function RootLayout({
       lang="en"
       className={`${interTight.variable} ${instrumentSerifRegular.variable} ${instrumentSerifItalic.variable} ${jetbrainsMono.variable}`}
     >
-      <body className="antialiased selection:bg-[#0d0d0d] selection:text-[#f4f2ee]">
-        <ScrollProvider>{children}</ScrollProvider>
+      <body className="antialiased selection:bg-[var(--ink)] selection:text-[var(--paper)]">
+        <ThemeProvider>
+          <ScrollProvider>{children}</ScrollProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
 }
+
